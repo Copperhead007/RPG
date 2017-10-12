@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905be887fd45c714da9c1562ce073d2f, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  name: Sword
-  icon: {fileID: 21300000, guid: 3f259d0b1962e4015b6e97c9a0a346ea, type: 3}
+  name: VorpalSword
+  icon: {fileID: 21300000, guid: 06a3257a2e39fd0478c74491c5bea3f0, type: 3}
+  showInInventory: 1
   equipSlot: 3
   armorModifier: 0
-  damageModifier: 2
+  damageModifier: 20
   prefab: {fileID: 137396888519945530, guid: 62cf6928881684e68b1dd63f2c32ef0a, type: 2}

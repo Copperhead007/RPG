@@ -25,12 +25,12 @@ public class TreasureChest : Interactable {
 	IEnumerator CollectTreasure() {
 
 		isOpen = true;
-        int numItems = Random.Range(0, 9);
+        int numItems = Random.Range(0, 4);
 		yield return new WaitForSeconds (1f);
 		print ("Chest opened");
 		for(int y = 0; y<=numItems; y++)
         {
-            Item i = items[Random.Range(0,5)];
+            Item i = items[Random.Range(0,6)];
 			Inventory.instance.Add (i);
 		}
 	}

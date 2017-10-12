@@ -13,8 +13,9 @@ using UnityEngine.AI;
 public class PlayerMotor : MonoBehaviour {
 
 	Transform target;
-	NavMeshAgent agent;     // Reference to our NavMeshAgent
-
+	NavMeshAgent agent;    // Reference to our NavMeshAgent
+    public Rigidbody rb;
+    public float moveForce = 500f;
 	void Start ()
 	{
 		agent = GetComponent<NavMeshAgent>();
@@ -51,8 +52,19 @@ public class PlayerMotor : MonoBehaviour {
 			FaceTarget ();
 
 		}
-	}
-
+    /*    if (Input.GetKey("d"))  // If the player is pressing the "d" key
+        {
+            // Add a force to the right
+            rb.AddForce(moveForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+        if (Input.GetKey("a"))  // If the player is pressing the "a" key
+        {
+            // Add a force to the left
+            rb.AddForce(-moveForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+        */
+    }
+    
 	void FaceTarget()
 	{
 		Vector3 direction = (target.position - transform.position).normalized;
