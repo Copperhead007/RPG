@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	public Transform target;
+	public Transform target;//Target to follow
 
 	public Vector3 offset;
 	public float smoothSpeed = 2f;
+
+    public GameObject playerCamera;
+    //public Transform player;
 
 	public float currentZoom = 1f;
 	public float maxZoom = 3f;
@@ -16,6 +19,7 @@ public class CameraController : MonoBehaviour {
 	public float zoomSensitivity = .7f;
 	float dst;
 
+    //float speed = 75.0f;
 	float zoomSmoothV;
 	float targetZoom;
 
@@ -34,14 +38,18 @@ public class CameraController : MonoBehaviour {
 			targetZoom = Mathf.Clamp(targetZoom - scroll, minZoom, maxZoom);
 		}
 		currentZoom = Mathf.SmoothDamp (currentZoom, targetZoom, ref zoomSmoothV, .15f);
-	}
+
+        //float yawInput = Input.GetAxisRaw("Horizontal");
+        float yRotation = playerCamera.transform.eulerAngles.y;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
+
+    }
 
 	void LateUpdate () {
 		transform.position = target.position - transform.forward * dst * currentZoom;
 		transform.LookAt(target.position);
-
-		float yawInput = Input.GetAxisRaw ("Horizontal");
-		transform.RotateAround (target.position, Vector3.up, -yawInput * yawSpeed * Time.deltaTime);
-	}
+        //float yawInput = Input.GetAxisRaw ("Horizontal");
+        //transform.RotateAround (target.position, Vector3.up, yawInput * yawSpeed * Time.deltaTime);
+    }
 
 }

@@ -1515,6 +1515,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95734539097625394}
+  weaponAnimations:
+  - weapons:
+    - {fileID: 11400000, guid: 70c79ed0aa29f4a53b0863a1bec53d3f, type: 2}
+    weaponIndex: 0
+    numAnimations: 1
+  - weapons:
+    - {fileID: 11400000, guid: 5ba3c3729fd314669bd21753d7085aa1, type: 2}
+    weaponIndex: 1
+    numAnimations: 2
 --- !u!114 &114658985731270352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1570,6 +1579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd7370537b7a104a8c9f03377b11362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transform: {fileID: 4649988152852904}
+  ob: {fileID: 0}
+  moveForce: 150
 --- !u!136 &136526628927629384
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1678,7 +1690,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.19
   m_Speed: 3
-  m_Acceleration: 12
+  m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 1200
   m_StoppingDistance: 0

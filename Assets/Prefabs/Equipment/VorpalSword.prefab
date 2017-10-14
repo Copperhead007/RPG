@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4603409610629002}
   - component: {fileID: 137396888519945530}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: VorpalSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

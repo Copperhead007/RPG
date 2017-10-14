@@ -14,63 +14,62 @@ public class PlayerMotor : MonoBehaviour {
 
 	Transform target;
 	NavMeshAgent agent;    // Reference to our NavMeshAgent
-    public Rigidbody rb;
-    public float moveForce = 500f;
+    public Transform transform;
+    //public Object ob;
+    //private Vector3 moveDirection = Vector3.zero;
+    public float moveForce = 150.0f;
 	void Start ()
 	{
 		agent = GetComponent<NavMeshAgent>();
 		GetComponent<PlayerController>().onFocusChangedCallback += OnFocusChanged;
 	}
 
-	public void MoveToPoint (Vector3 point)
-	{
-		agent.SetDestination(point);
-	}
+	//public void MoveToPoint (Vector3 point)
+	//{
+	//	agent.SetDestination(point);
+	//}
 
 	void OnFocusChanged (Interactable newFocus)
 	{
 		if (newFocus != null)
 		{
-			agent.stoppingDistance = newFocus.radius*.8f;
-			agent.updateRotation = false;
+			//agent.stoppingDistance = newFocus.radius*.8f;
+			//agent.updateRotation = false;
 
 			target = newFocus.interactionTransform;
 		}
 		else
 		{
-			agent.stoppingDistance = 0f;
-			agent.updateRotation = true;
+			//agent.stoppingDistance = 0f;
+			//agent.updateRotation = true;
 			target = null;
 		}
 	}
 
 	void Update ()
 	{
-		if (target != null)
-		{
-			MoveToPoint (target.position);
-			FaceTarget ();
+         /* if (target != null)
+          {
+              MoveToPoint (target.position);
+              FaceTarget ();
+          }
+          */
+        //Old Movement Not WASD
 
-		}
-    /*    if (Input.GetKey("d"))  // If the player is pressing the "d" key
-        {
-            // Add a force to the right
-            rb.AddForce(moveForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-        }
-        if (Input.GetKey("a"))  // If the player is pressing the "a" key
-        {
-            // Add a force to the left
-            rb.AddForce(-moveForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-        }
-        */
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * moveForce;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+
+        transform.Rotate(0, x, 0);
+        transform.Translate(0, 0, z);
     }
     
-	void FaceTarget()
+	/*void FaceTarget()
 	{
 		Vector3 direction = (target.position - transform.position).normalized;
 		Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
 		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
 	}
+    */
 		
 
 }

@@ -1491,6 +1491,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b2b9a31b76e54409cb67dcdf905d34e6, type: 3}
   m_PrefabInternal: {fileID: 411903025}
+--- !u!4 &418964720 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4649988152852904, guid: 4a5e8315f342741d1963b87f80a4a332,
+    type: 2}
+  m_PrefabInternal: {fileID: 854511414}
 --- !u!54 &418964728 stripped
 Rigidbody:
   m_PrefabParentObject: {fileID: 54321640823523872, guid: 4a5e8315f342741d1963b87f80a4a332,
@@ -3210,6 +3215,16 @@ Prefab:
       propertyPath: rb
       value: 
       objectReference: {fileID: 418964728}
+    - target: {fileID: 114925898638136736, guid: 4a5e8315f342741d1963b87f80a4a332,
+        type: 2}
+      propertyPath: moveForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925898638136736, guid: 4a5e8315f342741d1963b87f80a4a332,
+        type: 2}
+      propertyPath: transform
+      value: 
+      objectReference: {fileID: 418964720}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a5e8315f342741d1963b87f80a4a332, type: 2}
   m_IsPrefabParent: 0

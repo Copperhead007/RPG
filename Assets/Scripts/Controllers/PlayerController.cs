@@ -18,8 +18,9 @@ public class PlayerController : MonoBehaviour {
 	PlayerMotor motor;		// Reference to our motor
 	Camera cam;				// Reference to our camera
 
-	// Get references
-	void Start ()
+
+    // Get references
+    void Start ()
 	{
 		motor = GetComponent<PlayerMotor>();
 		cam = Camera.main;
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 			return;
 
 		// If we press left mouse
-		if (Input.GetMouseButtonDown(0))
+/*	if (Input.GetMouseButtonDown(0))
 		{
 			// Shoot out a ray
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 				SetFocus(null);
 			}
 		}
-
+*/
 		// If we press right mouse
 		if (Input.GetMouseButtonDown(1))
 		{
@@ -87,5 +88,6 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
+    
 
 }
