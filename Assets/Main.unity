@@ -1491,14 +1491,9 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b2b9a31b76e54409cb67dcdf905d34e6, type: 3}
   m_PrefabInternal: {fileID: 411903025}
---- !u!4 &418964720 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4649988152852904, guid: 4a5e8315f342741d1963b87f80a4a332,
-    type: 2}
-  m_PrefabInternal: {fileID: 854511414}
---- !u!54 &418964728 stripped
-Rigidbody:
-  m_PrefabParentObject: {fileID: 54321640823523872, guid: 4a5e8315f342741d1963b87f80a4a332,
+--- !u!1 &418964719 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1378388896379010, guid: 4a5e8315f342741d1963b87f80a4a332,
     type: 2}
   m_PrefabInternal: {fileID: 854511414}
 --- !u!1001 &426891348
@@ -3131,21 +3126,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: weaponAnimations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: weaponAnimations.Array.data[1].weapons.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: weaponAnimations.Array.data[0].weapons.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4649988152852904, guid: 4a5e8315f342741d1963b87f80a4a332, type: 2}
       propertyPath: m_LocalPosition.x
       value: -11.1
@@ -3176,55 +3156,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4649988152852904, guid: 4a5e8315f342741d1963b87f80a4a332, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
+    - target: {fileID: 114763211692402470, guid: 4a5e8315f342741d1963b87f80a4a332,
         type: 2}
-      propertyPath: weaponAnimations.Array.data[0].numAnimations
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: weaponAnimations.Array.data[1].weapons.Array.data[0]
+      propertyPath: cameraPlayer
       value: 
-      objectReference: {fileID: 11400000, guid: 5ba3c3729fd314669bd21753d7085aa1,
-        type: 2}
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: weaponAnimations.Array.data[1].numAnimations
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: weaponAnimations.Array.data[1].weaponIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 195266525255351556, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: m_Acceleration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: weaponAnimations.Array.data[0].weapons.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 70c79ed0aa29f4a53b0863a1bec53d3f,
-        type: 2}
-    - target: {fileID: 114925898638136736, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 418964728}
-    - target: {fileID: 114925898638136736, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: moveForce
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114925898638136736, guid: 4a5e8315f342741d1963b87f80a4a332,
-        type: 2}
-      propertyPath: transform
-      value: 
-      objectReference: {fileID: 418964720}
+      objectReference: {fileID: 1728564186}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a5e8315f342741d1963b87f80a4a332, type: 2}
   m_IsPrefabParent: 0
@@ -6347,12 +6285,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728564186}
-  m_LocalRotation: {x: 0, y: 0.97435045, z: -0.22503607, w: 0}
-  m_LocalPosition: {x: -10.1, y: -0, z: 17.4}
+  m_LocalRotation: {x: -0, y: 0.97435045, z: -0.22503607, w: 0}
+  m_LocalPosition: {x: -10.1, y: 0, z: 17.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 26.01, y: 180, z: 0}
 --- !u!114 &1728564192
 MonoBehaviour:
@@ -6380,10 +6318,11 @@ MonoBehaviour:
   target: {fileID: 402828487}
   offset: {x: 0, y: -0.5, z: 0}
   smoothSpeed: 2
+  playerCamera: {fileID: 418964719}
   currentZoom: 7
   maxZoom: 15
   minZoom: 4
-  yawSpeed: 70
+  yawSpeed: 90
   zoomSensitivity: 5
 --- !u!1001 &1730564005
 Prefab:
@@ -6392,6 +6331,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114013742640999002, guid: d340e3b73f678664993b283116b397ff,
+        type: 2}
+      propertyPath: items.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4726550566438660, guid: d340e3b73f678664993b283116b397ff, type: 2}
       propertyPath: m_LocalPosition.x
       value: -10.839
@@ -6424,6 +6368,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114013742640999002, guid: d340e3b73f678664993b283116b397ff,
+        type: 2}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d15f4d73ea1c4a52ae3bb8e8640e490,
+        type: 2}
+    - target: {fileID: 114013742640999002, guid: d340e3b73f678664993b283116b397ff,
+        type: 2}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 62891b298854a4b54a3230302d749268,
+        type: 2}
+    - target: {fileID: 114013742640999002, guid: d340e3b73f678664993b283116b397ff,
+        type: 2}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: ad01ff7886fde48aa99a767fff1c2243,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d340e3b73f678664993b283116b397ff, type: 2}
   m_IsPrefabParent: 0
