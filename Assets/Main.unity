@@ -3163,6 +3163,11 @@ Prefab:
       propertyPath: cameraPlayer
       value: 
       objectReference: {fileID: 1728564186}
+    - target: {fileID: 114555136790508838, guid: 4a5e8315f342741d1963b87f80a4a332,
+        type: 2}
+      propertyPath: chngVal
+      value: 0.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a5e8315f342741d1963b87f80a4a332, type: 2}
   m_IsPrefabParent: 0

@@ -7,6 +7,8 @@ public class CharacterAnimator : MonoBehaviour {
 	
 	public Animator animator;
 
+    public float chngVal;
+
 	NavMeshAgent navmeshAgent;
 	CharacterCombat combat;
 
@@ -17,8 +19,16 @@ public class CharacterAnimator : MonoBehaviour {
 	}
 
 	protected virtual void Update () {
-		animator.SetFloat ("Speed Percent", navmeshAgent.velocity.magnitude/navmeshAgent.speed,.1f,Time.deltaTime);
-	}
+		//animator.SetFloat ("Speed Percent", navmeshAgent.velocity.magnitude/navmeshAgent.speed,.1f,Time.deltaTime);
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        {
+            animator.SetFloat("Speed Percent", chngVal, .1f, Time.deltaTime);
+        }
+        else
+        {
+            animator.SetFloat("Speed Percent", 0.0f, .1f, Time.deltaTime);
+        }
+    }
 
 	protected virtual void OnAttack() {
 		animator.SetTrigger ("Attack");
