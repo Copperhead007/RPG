@@ -13,14 +13,14 @@ using UnityEngine.AI;
 public class PlayerMotor : MonoBehaviour {
 
 	Transform target;
-	NavMeshAgent agent;    // Reference to our NavMeshAgent
+	//NavMeshAgent agent;    // Reference to our NavMeshAgent
     public Transform transform;
     //public Object ob;
     //private Vector3 moveDirection = Vector3.zero;
     public float moveForce = 150.0f;
 	void Start ()
 	{
-		agent = GetComponent<NavMeshAgent>();
+		//agent = GetComponent<NavMeshAgent>();
 		GetComponent<PlayerController>().onFocusChangedCallback += OnFocusChanged;
 	}
 

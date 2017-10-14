@@ -9,11 +9,11 @@ public class CharacterAnimator : MonoBehaviour {
 
     public float chngVal;
 
-	NavMeshAgent navmeshAgent;
+	//NavMeshAgent navmeshAgent;
 	CharacterCombat combat;
 
 	protected virtual void Start() {
-		navmeshAgent = GetComponent<NavMeshAgent> ();
+		//navmeshAgent = GetComponent<NavMeshAgent> ();
 		combat = GetComponent<CharacterCombat> ();
 		combat.OnAttack += OnAttack;
 	}

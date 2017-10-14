@@ -10,13 +10,16 @@ public class EnemyController : MonoBehaviour {
 	public float lookRadius = 10f;
 
 	Transform target;
-	NavMeshAgent agent;
+    public Animator animator;
+	//NavMeshAgent agent;
 	CharacterCombat combatManager;
-
+    public float stopDist;
+    float speed = 1f;
+    bool beside = false;
 	void Start()
 	{
 		target = Player.instance.transform;
-		agent = GetComponent<NavMeshAgent>();
+		//agent = GetComponent<NavMeshAgent>();
 		combatManager = GetComponent<CharacterCombat>();
 	}
 
@@ -28,14 +31,28 @@ public class EnemyController : MonoBehaviour {
 		// If inside the radius
 		if (distance <= lookRadius)
 		{
-			// Move towards the player
-			agent.SetDestination(target.position);
-			if (distance <= agent.stoppingDistance)
+            // Move towards the player
+            //transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+            if(beside == false)
+            {
+               FaceTarget();
+                transform.position += transform.forward * speed * Time.deltaTime;
+                animator.SetFloat("Speed Percent", 0.8f, .1f, Time.deltaTime);
+
+            }
+
+            if (distance <= stopDist)
 			{
-				// Attack
+                // Attack
+                beside = true;
 				combatManager.Attack(Player.instance.playerStats);
 				FaceTarget();
+
 			}
+            if(distance > stopDist)
+            {
+                beside = false;
+            }
 		}
 	}
 
