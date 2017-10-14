@@ -14,7 +14,7 @@ public class PlayerMotor : MonoBehaviour {
 
 	Transform target;
 	//NavMeshAgent agent;    // Reference to our NavMeshAgent
-    public Transform transform;
+    //public Transform transform;
     //public Object ob;
     //private Vector3 moveDirection = Vector3.zero;
     public float moveForce = 150.0f;

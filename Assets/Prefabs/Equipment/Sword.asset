@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905be887fd45c714da9c1562ce073d2f, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  name: VorpalSword
+  name: Sword
   icon: {fileID: 21300000, guid: 3f259d0b1962e4015b6e97c9a0a346ea, type: 3}
   showInInventory: 1
   equipSlot: 3
