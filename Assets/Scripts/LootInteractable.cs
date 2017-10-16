@@ -6,7 +6,7 @@ public class LootInteractable : Interactable
 {
 
     public Item[] items;
-
+    bool hasInteracted = false;
     void Start()
     {
        // animator = GetComponent<Animator>();
@@ -15,12 +15,21 @@ public class LootInteractable : Interactable
     public override void Interact()
     {
         base.Interact();
-        int numItems = Random.Range(0, 4);
-        for (int y = 0; y <= numItems; y++)
+        if(hasInteracted == false)
         {
-            Item i = items[Random.Range(0, 3)];
-            Inventory.instance.Add(i);
+            int numItems = Random.Range(0, 4);
+            for (int y = 0; y <= numItems; y++)
+            {
+                Item i = items[Random.Range(0, 4)];
+                Inventory.instance.Add(i);
+            }
+            hasInteracted = true;
         }
+        else
+        {
+            return;
+        }
+        
     }
 
 }

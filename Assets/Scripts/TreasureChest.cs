@@ -31,7 +31,9 @@ public class TreasureChest : Interactable {
 		for(int y = 0; y<=numItems; y++)
         {
             Item i = items[Random.Range(0,6)];
-			Inventory.instance.Add (i);
+            Inventory.instance.Add (i);
+            //Item i = items[y];
+            //Inventory.instance.Add(i);
 		}
 	}
 }

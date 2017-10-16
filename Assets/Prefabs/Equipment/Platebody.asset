@@ -15,6 +15,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 083fa591b8ce94432a62137ec492db83, type: 3}
   showInInventory: 1
   equipSlot: 1
-  armorModifier: 0
-  damageModifier: 2
+  armorModifier: 2
+  damageModifier: 0
   prefab: {fileID: 137468473653210060, guid: 342545ff81f32425b97a7a312b795326, type: 2}

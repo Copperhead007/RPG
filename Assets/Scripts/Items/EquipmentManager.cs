@@ -51,7 +51,7 @@ public class EquipmentManager : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetKeyDown (KeyCode.U)) {
+		if (Input.GetKeyDown(KeyCode.U)) {
 			UnequipAll ();
 		}
 	}
@@ -97,8 +97,8 @@ public class EquipmentManager : MonoBehaviour {
 	void Unequip(int slotIndex) {
 		if (currentEquipment[slotIndex] != null)
 		{
-			Equipment oldItem = currentEquipment [slotIndex];
-			inventory.Add(oldItem);
+			Equipment oldItem = currentEquipment [slotIndex];//Holder
+			inventory.Add(oldItem);//Removes and Adds to Inventory
 				
 			currentEquipment [slotIndex] = null;
 			if (currentMeshes [slotIndex] != null) {
@@ -108,7 +108,7 @@ public class EquipmentManager : MonoBehaviour {
 
 			// Equipment has been removed so we trigger the callback
 			if (onEquipmentChanged != null)
-				onEquipmentChanged.Invoke(null, oldItem);
+				onEquipmentChanged.Invoke(null, oldItem);//Here is the problem is not removing modifier... maybe
 			
 		}
 
@@ -119,12 +119,12 @@ public class EquipmentManager : MonoBehaviour {
 		for (int i = 0; i < currentEquipment.Length; i++) {
 			Unequip (i);
 		}
-		EquipAllDefault ();
+        EquipAllDefault();
 	}
 
 	void EquipAllDefault() {
 		foreach (Equipment e in defaultWear) {
-			Equip (e);
+            Equip(e);
 		}
 	}
 

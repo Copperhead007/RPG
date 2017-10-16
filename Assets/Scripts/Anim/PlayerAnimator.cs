@@ -9,8 +9,9 @@ public class PlayerAnimator : CharacterAnimator {
 	WeaponAnimation currentWeaponAnimation;
 
 	void Awake() {
-		EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
-		currentWeaponAnimation = weaponAnimations [0];
+        currentWeaponAnimation = weaponAnimations[0];
+        EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+		
 	}
 
 	protected override void Start() {
@@ -41,8 +42,9 @@ public class PlayerAnimator : CharacterAnimator {
 
 		if (newItem != null) {
 			
-			if (newItem.equipSlot == EquipmentSlot.Weapon) {
-				WeaponAnimation newC = weaponAnimations.First (x => x.weapons.Contains (newItem));
+			if (newItem.equipSlot == EquipmentSlot.Weapon)
+            {
+				WeaponAnimation newC = weaponAnimations.First(x => x.weapons.Contains(newItem));
 				if (newC != null) {
 					currentWeaponAnimation = newC;
 

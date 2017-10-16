@@ -15,14 +15,14 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask movementMask;		// The ground
 	public LayerMask interactionMask;	// Everything we can interact with
 
-	PlayerMotor motor;		// Reference to our motor
+	//PlayerMotor motor;		// Reference to our motor
 	Camera cam;				// Reference to our camera
 
 
     // Get references
     void Start ()
 	{
-		motor = GetComponent<PlayerMotor>();
+		//motor = GetComponent<PlayerMotor>();
 		cam = Camera.main;
 	}
 
